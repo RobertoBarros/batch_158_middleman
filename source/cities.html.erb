@@ -1,0 +1,33 @@
+<div class="container" id='cities'>
+  <h1>Where can you find us?</h1>
+
+
+
+
+  <div class="row">
+    <% data.cities.each do |key, city| %>
+      <div class="col-xs-12 col-sm-4">
+
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= city.image_url %>);">
+        <div class="card-category">Popular</div>
+        <div class="card-description">
+          <h2>Le Wagon <%= city.name  %></h2>
+          <p><%= city.address %></p>
+        </div>
+        <img class="card-user" src="<%= city.user %>">
+        <a class="card-link" href="#" ></a>
+      </div>
+
+
+
+      </div>
+    <% end%>
+  </div>
+
+
+
+  <p>
+    <button class='btn btn-success' >Apply Now!</button>
+  </p>
+</div>
+
